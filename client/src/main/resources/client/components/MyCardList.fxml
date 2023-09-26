@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="cardListBox" spacing="10.0" style="-fx-padding: 10px; -fx-border-style: solid; -fx-border-width: 5px; -fx-border-color: #b5c7a5;   -fx-background-color: #F2E5D5;" type="VBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <StackPane fx:id="topPane" onMouseEntered="#topPaneOnMouseEnter" onMouseExited="#topPaneOnMouseExit" style="-fx-border-style: hidden hidden solid hidden; -fx-border-width: 2; -fx-border-color: #b5c7a5;">
+    <children>
+      <Text fx:id="title" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Default Title" textAlignment="CENTER" wrappingWidth="128.9090118408203" StackPane.alignment="CENTER" />
+      <Button fx:id="moveButton" mnemonicParsing="false" style="-fx-shape: &quot;M4.394,154.394c-5.858,5.857-5.858,15.355,0,21.213l37.5,37.5c2.929,2.929,6.768,4.394,10.606,4.394s7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213L51.213,180H150v98.787l-11.894-11.893c-5.857-5.857-15.355-5.857-21.213,0c-5.858,5.857-5.858,15.355,0,21.213l37.5,37.5C157.322,328.535,161.161,330,165,330s7.678-1.465,10.606-4.394l37.5-37.5c5.858-5.857,5.858-15.355,0-21.213c-5.857-5.857-15.355-5.857-21.213,0L180,278.787V180h98.787l-11.893,11.894c-5.858,5.857-5.858,15.355,0,21.213c2.929,2.929,6.767,4.394,10.606,4.394c3.839,0,7.678-1.465,10.606-4.394l37.5-37.5c5.858-5.857,5.858-15.355,0-21.213l-37.5-37.5c-5.857-5.857-15.355-5.857-21.213,0c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H180V51.213l11.894,11.893c2.929,2.929,6.768,4.394,10.606,4.394s7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213l-37.5-37.5c-5.857-5.858-15.355-5.858-21.213,0l-37.5,37.5c-5.858,5.857-5.858,15.355,0,21.213c5.857,5.857,15.355,5.857,21.213,0L150,51.213V150H51.213l11.894-11.894c5.858-5.857,5.858-15.355,0-21.213c-5.857-5.857-15.355-5.857-21.213,0L4.394,154.394z&quot;; -fx-background-color: black; -fx-scale-x: 0.8; -fx-scale-y: 0.5; -fx-cursor: hand;" visible="false" StackPane.alignment="CENTER_RIGHT">
+        <StackPane.margin>
+          <Insets right="40.0" />
+        </StackPane.margin>
+      </Button>
+      <Button fx:id="editButton" mnemonicParsing="false" onAction="#editCardList" style="-fx-shape: &quot;M 18.414062 2 C 18.158062 2 17.902031 2.0979687 17.707031 2.2929688 L 15.707031 4.2929688 L 14.292969 5.7070312 L 3 17 L 3 21 L 7 21 L 21.707031 6.2929688 C 22.098031 5.9019687 22.098031 5.2689063 21.707031 4.8789062 L 19.121094 2.2929688 C 18.926094 2.0979687 18.670063 2 18.414062 2 z M 18.414062 4.4140625 L 19.585938 5.5859375 L 18.292969 6.8789062 L 17.121094 5.7070312 L 18.414062 4.4140625 z M 15.707031 7.1210938 L 16.878906 8.2929688 L 6.171875 19 L 5 19 L 5 17.828125 L 15.707031 7.1210938 z&quot;; -fx-background-color: black; -fx-scale-y: 0.6; -fx-scale-x: 1; -fx-cursor: hand;" visible="false" StackPane.alignment="CENTER_RIGHT">
+        <StackPane.margin>
+          <Insets right="20.0" />
+        </StackPane.margin>
+      </Button>
+      <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteCardList" style="-fx-shape: &quot;M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z&quot;; -fx-background-color: black; -fx-scale-y: 0.5; -fx-scale-x: 0.8; -fx-cursor: hand;" visible="false" StackPane.alignment="CENTER_RIGHT" />
+    </children>
+    <VBox.margin>
+      <Insets />
+    </VBox.margin>
+    <padding>
+      <Insets bottom="10.0" />
+    </padding>
+  </StackPane>
+
+  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" style="-fx-background-color: #F2E5D5;" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+    <ListView fx:id="cards" prefHeight="272.0" prefWidth="156.0" style="-fx-background-color: #F2E5D5;">
+    </ListView>
+  </ScrollPane>
+  <Button id="addButton" fx:id="addCardButton" alignment="CENTER" mnemonicParsing="false" onAction="#goToAddCard" style="-fx-background-color: #b5c7a5; -fx-cursor: hand; -fx-font-size: 10px;" text="Add Card" BorderPane.alignment="CENTER" />
+</fx:root>

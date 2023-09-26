@@ -1,0 +1,9 @@
+dependencies {
+  implementation group: 'jakarta.persistence', name: 'jakarta.persistence-api', version: '3.1.0'
+  implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.2'
+  implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.14.2'
+
+  // Mapstruct
+  implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.3.Final'
+  annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+}

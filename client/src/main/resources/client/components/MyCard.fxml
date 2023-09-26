@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="cardBox" onMouseEntered="#cardBoxOnMouseEnter" onMouseExited="#cardBoxOnMouseExit" prefHeight="70.0" prefWidth="141.0" style="-fx-background-color: #fff; -fx-border-color: black; -fx-padding: 5px; -fx-border-width: 1px; -fx-border-style: solid;" type="VBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <StackPane prefHeight="150.0" prefWidth="136.0">
+    <Button fx:id="moveCardButton" mnemonicParsing="false" style="-fx-shape: &quot;M4.394,154.394c-5.858,5.857-5.858,15.355,0,21.213l37.5,37.5c2.929,2.929,6.768,4.394,10.606,4.394s7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213L51.213,180H150v98.787l-11.894-11.893c-5.857-5.857-15.355-5.857-21.213,0c-5.858,5.857-5.858,15.355,0,21.213l37.5,37.5C157.322,328.535,161.161,330,165,330s7.678-1.465,10.606-4.394l37.5-37.5c5.858-5.857,5.858-15.355,0-21.213c-5.857-5.857-15.355-5.857-21.213,0L180,278.787V180h98.787l-11.893,11.894c-5.858,5.857-5.858,15.355,0,21.213c2.929,2.929,6.767,4.394,10.606,4.394c3.839,0,7.678-1.465,10.606-4.394l37.5-37.5c5.858-5.857,5.858-15.355,0-21.213l-37.5-37.5c-5.857-5.857-15.355-5.857-21.213,0c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H180V51.213l11.894,11.893c2.929,2.929,6.768,4.394,10.606,4.394s7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213l-37.5-37.5c-5.857-5.858-15.355-5.858-21.213,0l-37.5,37.5c-5.858,5.857-5.858,15.355,0,21.213c5.857,5.857,15.355,5.857,21.213,0L150,51.213V150H51.213l11.894-11.894c5.858-5.857,5.858-15.355,0-21.213c-5.857-5.857-15.355-5.857-21.213,0L4.394,154.394z&quot;; -fx-background-color: black; -fx-scale-x: 0.8; -fx-scale-y: 0.5; -fx-cursor: hand;" visible="false" StackPane.alignment="TOP_RIGHT">
+      <StackPane.margin>
+        <Insets right="20.0" />
+      </StackPane.margin>
+    </Button>
+    <Button fx:id="removeCardButton" mnemonicParsing="false" onAction="#remove" style="-fx-shape: &quot;M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z&quot; &quot;M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z&quot;; -fx-background-color: black; -fx-scale-y: 0.5; -fx-scale-x: 0.8; -fx-cursor: hand;" visible="false" StackPane.alignment="TOP_RIGHT">
+      <StackPane.margin>
+        <Insets left="10.0" />
+      </StackPane.margin>
+    </Button>
+    <SVGPath fx:id="descIcon" content="M 6.8195 10.6434 H 19.6402 C 19.8824 10.6434 20.0784 10.363 20.0784 10.0174 S 19.8823 9.391 19.6402 9.391 H 6.8198 C 6.5777 9.391 6.3815 9.6714 6.3815 10.0174 C 6.3814 10.3632 6.5776 10.6434 6.8197 10.6434 Z M 6.8195 14.0454 H 14.5598 C 14.8021 14.0454 14.9981 13.7651 14.9981 13.4194 S 14.8019 12.793 14.5598 12.793 H 6.8195 C 6.5774 12.793 6.3811 13.0734 6.3811 13.4194 C 6.3809 13.7652 6.5772 14.0454 6.8194 14.0454 Z M 19.6405 16.1951 H 6.8198 C 6.5777 16.1951 6.3815 16.4757 6.3815 16.8212 C 6.3815 17.1674 6.5777 17.4473 6.8198 17.4473 H 19.6405 C 19.8828 17.4473 20.0787 17.1671 20.0787 16.8212 C 20.0789 16.4755 19.8828 16.1951 19.6405 16.1951 Z M 14.5598 19.5971 H 6.8195 C 6.5774 19.5971 6.3811 19.8777 6.3811 20.2232 C 6.3811 20.5694 6.5773 20.8493 6.8195 20.8493 H 14.5598 C 14.8021 20.8493 14.9981 20.5691 14.9981 20.2232 C 14.9979 19.8775 14.8019 19.5971 14.5595 19.5971 Z" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" StackPane.alignment="BOTTOM_LEFT">
+      <StackPane.margin>
+        <Insets bottom="3.0" />
+      </StackPane.margin>
+    </SVGPath>
+    <Text fx:id="title" onMouseClicked="#edit" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" style="-fx-cursor: hand; -fx-font-size: 13px;" text="Default Title" StackPane.alignment="TOP_LEFT" />
+    <SVGPath fx:id="dateIcon" content="M 5.6 2.8 H 5.0401 C 4.2561 2.8 3.8637 2.8 3.5643 2.9526 C 3.3008 3.0868 3.0868 3.3008 2.9526 3.5643 C 2.8 3.8637 2.8 4.2561 2.8 5.0401 V 5.6 M 5.6 2.8 H 11.2 M 5.6 2.8 V 1.4 M 11.2 2.8 H 11.7601 C 12.5442 2.8 12.9357 2.8 13.2352 2.9526 C 13.4986 3.0868 13.7133 3.3008 13.8475 3.5643 C 14 3.8634 14 4.2553 14 5.0378 V 5.6 M 11.2 2.8 V 1.4 M 2.8 5.6 V 11.7601 C 2.8 12.5442 2.8 12.9361 2.9526 13.2355 C 3.0868 13.4989 3.3008 13.7133 3.5643 13.8475 C 3.8634 14 4.2553 14 5.0378 14 H 11.7622 C 12.5447 14 12.936 14 13.2352 13.8475 C 13.4986 13.7133 13.7133 13.4989 13.8475 13.2355 C 14 12.9363 14 12.545 14 11.7625 V 5.6 M 2.8 5.6 H 14 M 11.2 11.2 H 11.2014 L 11.2014 11.2014 L 11.2 11.2014 V 11.2 Z M 8.4 11.2 H 8.4014 L 8.4014 11.2014 L 8.4 11.2014 V 11.2 Z M 5.6 11.2 H 5.6014 L 5.6014 11.2014 L 5.6 11.2014 V 11.2 Z M 11.2014 8.4 V 8.4014 L 11.2 8.4014 V 8.4 H 11.2014 Z M 8.4 8.4 H 8.4014 L 8.4014 8.4014 L 8.4 8.4014 V 8.4 Z M 5.6 8.4 H 5.6014 L 5.6014 8.4014 L 5.6 8.4014 V 8.4 Z" fill="WHITE" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.6" visible="false" StackPane.alignment="BOTTOM_LEFT">
+      <StackPane.margin>
+        <Insets />
+      </StackPane.margin>
+    </SVGPath>
+      <Pane maxHeight="20.0" maxWidth="90.0" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="BOTTOM_RIGHT">
+         <children>
+            <HBox fx:id="tagCircles" alignment="BOTTOM_RIGHT" prefHeight="20.0" prefWidth="90.0" spacing="2.0">
+               <children>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Label fx:id="taskProgress" prefHeight="15.0" prefWidth="19.0" text="0/0" StackPane.alignment="CENTER_LEFT">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+  </StackPane>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</fx:root>

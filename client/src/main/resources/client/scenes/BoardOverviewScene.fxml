@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="boardBackground" prefHeight="629.0" prefWidth="835.0" style="-fx-background-color: #A69180;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.BoardOverviewCtrl">
+  <BorderPane prefHeight="456.0" prefWidth="780.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+    <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="555.0" prefWidth="781.0" BorderPane.alignment="CENTER">
+        <ListView fx:id="lists" orientation="HORIZONTAL" prefHeight="412.0" prefWidth="779.0" style="-fx-background-color: #F2E5D5;">
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <opaqueInsets>
+            <Insets right="10.0" />
+          </opaqueInsets>
+        </ListView>
+      </ScrollPane>
+    </center>
+    <top>
+      <StackPane BorderPane.alignment="CENTER">
+        <padding>
+          <Insets bottom="20.0" />
+        </padding>
+        <Button fx:id="addListButton" mnemonicParsing="false" onAction="#goToAddList" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #d1b7a1; -fx-border-width: 1; -fx-border-style: none; -fx-cursor: hand; -fx-border-radius: 0.2; -fx-font-size: 10px;" text="Add Card List" StackPane.alignment="CENTER_RIGHT" />
+        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="30.0" prefWidth="301.0" spacing="5.0" StackPane.alignment="CENTER_LEFT">
+          <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToOverview" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: black; -fx-shape: &quot;m 1.731867,9.9956035 c 2e-5,0.7560365 0.09966,1.4842425 0.298902,2.1846165 0.199287,0.700357 0.477675,1.358232 0.835165,1.973627 0.357528,0.615372 0.786831,1.175079 1.287912,1.67912 0.501116,0.504017 1.057891,0.936251 1.67033,1.296703 0.612469,0.360426 1.270344,0.640279 1.973627,0.839561 0.703309,0.199253 1.432978,0.298886 2.18901,0.298901 0.756055,-1.5e-5 1.484259,-0.09965 2.184616,-0.298901 0.700375,-0.199282 1.355319,-0.479135 1.964834,-0.839561 0.609531,-0.360452 1.167773,-0.792686 1.674726,-1.296703 0.506965,-0.504041 0.940664,-1.063748 1.301099,-1.67912 0.360444,-0.615395 0.641762,-1.27327 0.843956,-1.973627 0.202201,-0.700374 0.3033,-1.42858 0.303296,-2.1846165 4e-6,-0.756049 -0.09963,-1.484254 -0.298901,-2.184615 -0.199263,-0.70037 -0.479116,-1.356779 -0.83956,-1.969231 -0.360435,-0.612454 -0.792669,-1.169231 -1.296704,-1.67033 -0.504022,-0.501098 -1.063729,-0.931867 -1.67912,-1.292307 -0.615377,-0.360439 -1.273251,-0.640292 -1.973626,-0.839561 -0.700357,-0.199264 -1.428561,-0.298899 -2.184616,-0.2989 -0.756032,10e-7 -1.485701,0.09964 -2.18901,0.2989 -0.703283,0.199269 -1.361158,0.477658 -1.973627,0.835165 -0.612439,0.357511 -1.169214,0.786814 -1.67033,1.287912 -0.501081,0.501099 -0.930384,1.05934 -1.287912,1.674726 -0.35749,0.615382 -0.635878,1.273256 -0.835165,1.973626 -0.199247,0.700361 -0.298882,1.428566 -0.298902,2.184615 z m 2.769231,0.035172 0,-0.035172 4.026374,-4.210988 2.918682,0 -3.068132,3.138462 6.672527,0 0,2.1802195 -6.672527,0 3.068132,3.138461 -2.918682,0 z M 0,9.9868115 c 2.0999981e-5,-0.90843 0.120171,-1.784619 0.360439,-2.628572 0.240315,-0.843958 0.58024,-1.636632 1.01978,-2.378021 0.43958,-0.741393 0.964123,-1.416851 1.573627,-2.026375 C 3.563387,2.3443225 4.238845,1.8197795 4.980218,1.3802185 5.721627,0.94065953 6.515765,0.60073453 7.362637,0.36043753 8.209538,0.12014953 9.087192,2.5255985e-6 9.995604,-4.7440151e-7 10.90404,2.5255985e-6 11.781694,0.12015453 12.628571,0.36043853 c 0.846895,0.240297 1.641033,0.577292 2.382418,1.01098997 0.741398,0.433701 1.41832,0.955312 2.030769,1.564835 0.612458,0.609524 1.138465,1.284982 1.578022,2.026374 0.439563,0.74139 0.77949,1.535528 1.01978,2.382416 0.240295,0.846883 0.360442,1.727468 0.36044,2.641759 2e-6,0.9084175 -0.120145,1.7860735 -0.36044,2.6329675 -0.24029,0.846877 -0.580217,1.641015 -1.01978,2.382417 -0.439557,0.74138 -0.965564,1.418303 -1.578022,2.03077 -0.612449,0.61244 -1.289371,1.138447 -2.030769,1.578022 -0.741385,0.439545 -1.535523,0.780937 -2.382418,1.024176 C 11.781694,19.878372 10.90404,19.999984 9.995604,20 9.087192,19.999984 8.209538,19.879837 7.362637,19.63956 6.515765,19.399252 5.721627,19.06079 4.980218,18.624176 4.238845,18.187531 3.563387,17.66299 2.953846,17.050549 2.344342,16.438082 1.819799,15.761159 1.380219,15.019779 0.940679,14.278377 0.600754,13.482774 0.360439,12.632967 0.120168,11.783143 2.0999981e-5,10.901091 0,9.9868125 z&quot;; -fx-scale-x: 0.3; -fx-scale-y: 0.7;">
+            <cursor>
+              <Cursor fx:constant="HAND" />
+            </cursor>
+          </Button>
+          <Text fx:id="boardName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial; -fx-font-size: 18px; -fx-stroke-type: outside; -fx-stroke-line-cap: square; stroke-line-join: miter; -fx-stroke-miter-limit: 10;" text="Board name" />
+          <Button fx:id="showBoardManagementButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#showBoardManagementPopUp" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: black; -fx-cursor: hand; -fx-shape: &quot;M38.86 25.95c.08-.64.14-1.29.14-1.95s-.06-1.31-.14-1.95l4.23-3.31c.38-.3.49-.84.24-1.28l-4-6.93c-.25-.43-.77-.61-1.22-.43l-4.98 2.01c-1.03-.79-2.16-1.46-3.38-1.97l-.75-5.3c-.09-.47-.5-.84-1-.84h-8c-.5 0-.91.37-.99.84l-.75 5.3c-1.22.51-2.35 1.17-3.38 1.97l-4.98-2.01c-.45-.17-.97 0-1.22.43l-4 6.93c-.25.43-.14.97.24 1.28l4.22 3.31c-.08.64-.14 1.29-.14 1.95s.06 1.31.14 1.95l-4.22 3.31c-.38.3-.49.84-.24 1.28l4 6.93c.25.43.77.61 1.22.43l4.98-2.01c1.03.79 2.16 1.46 3.38 1.97l.75 5.3c.08.47.49.84.99.84h8c.5 0 .91-.37.99-.84l.75-5.3c1.22-.51 2.35-1.17 3.38-1.97l4.98 2.01c.45.17.97 0 1.22-.43l4-6.93c.25-.43.14-.97-.24-1.28l-4.22-3.31zm-14.86 5.05c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z&quot;; -fx-scale-x: 0.5; -fx-scale-y: 0.6;">
+            <font>
+              <Font size="10.0" />
+            </font>
+            <cursor>
+              <Cursor fx:constant="HAND" />
+            </cursor>
+          </Button>
+        </HBox>
+        <Button fx:id="tagButton" layoutX="800.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToShowTags" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #d1b7a1; -fx-border-width: 1; -fx-border-style: none; -fx-cursor: hand; -fx-border-radius: 0.2; -fx-font-size: 10px; -fx-cursor: hand;" text="Show Tags" StackPane.alignment="CENTER_RIGHT">
+          <StackPane.margin>
+            <Insets right="100.0" />
+          </StackPane.margin>
+        </Button>
+      </StackPane>
+    </top>
+  </BorderPane>
+  <StackPane fx:id="manageBoardPopUp" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane opacity="0.5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" />
+    <Pane maxHeight="480.0" maxWidth="435.0" prefHeight="478.0" prefWidth="435.0" style="-fx-background-color: #F2E5D5; -fx-border-width: 10px; -fx-border-color: #75695a;" translateY="10.0">
+      <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      <Button fx:id="resetOuterColor" layoutX="149.0" layoutY="209.0" mnemonicParsing="false" onAction="#resetOuterColor" prefHeight="30.0" prefWidth="48.0" style="-fx-background-color: #a88d32; -fx-cursor: hand;" text="Reset" />
+      <Button fx:id="saveOuterColor" layoutX="336.0" layoutY="362.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #d1b7a1; -fx-cursor: hand;" text="Save" />
+      <Label layoutX="32.0" layoutY="179.0" prefHeight="30.0" prefWidth="112.0" text="Outer board color" />
+      <TextField fx:id="boardNameField" layoutX="32.0" layoutY="70.0" promptText="Please fill this field" />
+      <Line endX="221.66671752929688" endY="-7.62939453125E-6" layoutX="133.0" layoutY="113.0" startX="-100.0" />
+      <Text fill="#747474" layoutX="32.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15px; -fx-stroke-line-cap: square; -fx-stroke-type: outside; -fx-stroke-line-join: miter; -fx-stroke-miter-limit: 10; -fx-stroke-dash-offset: 0;" text="Board id :" wrappingWidth="72.4628791809082" />
+      <Text fx:id="boardId" fill="#747474" layoutX="103.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15px;" text="Board id field" wrappingWidth="195.72206115722656" />
+      <Button fx:id="saveButton" layoutX="197.0" layoutY="70.0" mnemonicParsing="false" onAction="#applyBoardNameChange" prefHeight="1.0" prefWidth="55.0" style="-fx-background-color: #d1b7a1; -fx-border-width: 1; -fx-border-style: none; -fx-cursor: hand; -fx-border-radius: 0.2;" text="Apply" />
+      <Button fx:id="closeBoardPopUpButton" layoutX="309.0" layoutY="420.0" mnemonicParsing="false" onAction="#closeBoardManagementPopUp" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #d1b7a1; -fx-border-width: 1; -fx-border-style: none; -fx-cursor: hand; -fx-border-radius: 0.2; -fx-font-size: 10px;" text="Close window" />
+      <Button fx:id="updateConfMarkButton" layoutX="273.0" layoutY="70.0" mnemonicParsing="false" style="-fx-shape: &quot;M4.43,63.63c-2.869-2.755-4.352-6.42-4.427-10.11c-0.074-3.689,1.261-7.412,4.015-10.281 c2.752-2.867,6.417-4.351,10.106-4.425c3.691-0.076,7.412,1.255,10.283,4.012l24.787,23.851L98.543,3.989l1.768,1.349l-1.77-1.355 c0.141-0.183,0.301-0.339,0.479-0.466c2.936-2.543,6.621-3.691,10.223-3.495V0.018l0.176,0.016c3.623,0.24,7.162,1.85,9.775,4.766 c2.658,2.965,3.863,6.731,3.662,10.412h0.004l-0.016,0.176c-0.236,3.558-1.791,7.035-4.609,9.632l-59.224,72.09l0.004,0.004 c-0.111,0.141-0.236,0.262-0.372,0.368c-2.773,2.435-6.275,3.629-9.757,3.569c-3.511-0.061-7.015-1.396-9.741-4.016L4.43,63.63 L4.43,63.63z&quot;; -fx-background-color: green; -fx-scale-x: 1; -fx-scale-y: 0.6;" visible="false" />
+      <Button fx:id="deleteButton" layoutX="136.0" layoutY="415.0" mnemonicParsing="false" onAction="#deleteBoard" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #d98075; -fx-border-width: 1; -fx-border-style: none; -fx-cursor: hand; -fx-border-radius: 0.2; -fx-font-size: 10px;" text="Delete Board" />
+      <Text fx:id="emptyInputError" fill="RED" layoutX="260.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Field cannot be empty!" visible="false" />
+      <Button fx:id="leaveButton" layoutX="29.0" layoutY="415.0" mnemonicParsing="false" onAction="#leaveBoard" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #d69890; -fx-border-width: 1; -fx-border-style: none; -fx-cursor: hand; -fx-border-radius: 0.2; -fx-font-size: 10px;" text="Leave Board" />
+      <ColorPicker fx:id="outerColorPicker" layoutX="32.0" layoutY="209.0" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #A69180; -fx-cursor: hand;" />
+      <Label layoutX="225.0" layoutY="179.0" prefHeight="30.0" prefWidth="112.0" text="Inner board color" />
+      <ColorPicker fx:id="innerColorPicker" layoutX="225.0" layoutY="209.0" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #A69180; -fx-cursor: hand;" />
+      <Button fx:id="resetInnerColor" layoutX="343.0" layoutY="209.0" mnemonicParsing="false" onAction="#resetInnerColor" prefHeight="30.0" prefWidth="48.0" style="-fx-background-color: #a88d32; -fx-cursor: hand;" text="Reset" />
+      <Label layoutX="31.0" layoutY="357.0" prefHeight="30.0" prefWidth="64.0" text="Font:" />
+      <ComboBox fx:id="fontPicker" layoutX="74.0" layoutY="359.0" prefWidth="150.0" promptText="Pick a font..." style="-fx-background-color: #d1b7a1; -fx-cursor: hand;" />
+      <ColorPicker fx:id="cardListBorderColorPicker" layoutX="225.0" layoutY="294.0" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #A69180; -fx-cursor: hand;" />
+      <ColorPicker fx:id="cardListBackgroundColorPicker" layoutX="32.0" layoutY="294.0" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #A69180; -fx-cursor: hand;" />
+         <Button fx:id="resetBorderColor" layoutX="343.0" layoutY="294.0" mnemonicParsing="false" onAction="#resetBorderColor" prefHeight="30.0" prefWidth="48.0" style="-fx-background-color: #a88d32; -fx-cursor: hand;" text="Reset" />
+         <Button fx:id="resetBackgroundColor" layoutX="149.0" layoutY="294.0" mnemonicParsing="false" onAction="#resetBackgroundColor" prefHeight="30.0" prefWidth="48.0" style="-fx-background-color: #a88d32; -fx-cursor: hand;" text="Reset" />
+         <Label layoutX="225.0" layoutY="264.0" prefHeight="30.0" prefWidth="121.0" text="Card list border color" />
+         <Label layoutX="31.0" layoutY="264.0" prefHeight="30.0" prefWidth="164.0" text="Card list background color" textOverrun="CLIP" />
+         <Label layoutX="32.0" layoutY="31.0" prefHeight="30.0" prefWidth="112.0" text="Board name">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+    </Pane>
+  </StackPane>
+</AnchorPane>

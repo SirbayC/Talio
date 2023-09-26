@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="cardBox" onMouseEntered="#cardBoxOnMouseEnter" onMouseExited="#cardBoxOnMouseExit" prefHeight="20.0" prefWidth="140.0" style="-fx-padding: 5px; -fx-border-width: 1px; -fx-border-style: solid; -fx-background-color: #FFFFFF;" type="HBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <StackPane prefHeight="10.0" prefWidth="155.0">
+    <Button fx:id="removeTagButton" mnemonicParsing="false" onAction="#remove" style="-fx-shape: &quot;M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z&quot; &quot;M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z&quot;; -fx-background-color: black; -fx-scale-y: 0.5; -fx-scale-x: 0.8; -fx-cursor: hand;" visible="false" StackPane.alignment="CENTER_RIGHT">
+      <StackPane.margin>
+        <Insets />
+      </StackPane.margin>
+      <opaqueInsets>
+        <Insets />
+      </opaqueInsets>
+    </Button>
+    <Text fx:id="title" text="Default Title" StackPane.alignment="CENTER_LEFT">
+      <StackPane.margin>
+        <Insets left="5.0" />
+      </StackPane.margin></Text>
+  </StackPane>
+</fx:root>
