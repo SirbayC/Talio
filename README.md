@@ -18,6 +18,10 @@ customized for a more personalised look.
 
 ## How to run it
 
+First, in order to set up the JavaFX dependencies, make sure to download the JavaFX SDK (19.0.2.1) and store it in an accessible location. Then, go to `File >> Project Structure >> Modules >> Dependency >> + (on left-side of window)`, referencing the directory where the unpacked SDK's `lib` folder is located. Don't change the default settings.
+
+Then, in `Run >> Edit Configurations`, add the following line to VM Options: `--module-path /path/to/JavaFX/lib --add-modules=javafx.controls,javafx.fxml`.
+
 To run the Talio application the client and server need to be started, this can be done in an
 arbitrary order. When connecting to the server make sure this has finished its start-up procedure.
 
@@ -38,3 +42,7 @@ The hashcode of a password can be calculated using the following steps:
 - `hash = 7`
 - For each character `c` in the password we multiply `hash` by `31` and add the integer
   representation in `UTF16` of the character `c` to this.
+
+## Disclaimer
+
+The original repository is located on GitLab, this being a simple copy of it, with demonstrative purposes. The code, as mentioned earlier, was created by me and the mentioned team members, based on a template provided by the university. The code and content in this repository is provided for reference purposes only. One may not copy, reproduce, or distribute this code without explicit permission from the owner. Unauthorized use of this code may violate applicable copyright laws.
